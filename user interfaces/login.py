@@ -1,35 +1,26 @@
+from PyQt5 import QtGui
+from PyQt5.QtWidgets import QApplication, QMainWindow
 import sys
-from PyQt5 import QtCore, QtGui, QtWidgets
 
-class ui_Dialog(object):
-	def setupUi(self, Dialog):
-		Dialog.setObjectName("Dialog")
-		Dialog.resize(600,300)
+class Window(QMainWindow):
+	"""docstring for Window"""
+	def __init__(self):
+		super().__init__()
 		
-		self.label_name = QtWidgets.QLabel(Dialog)
-		self.label_name.setGeometry(QtCore.QRect(53,50,91,16))
-		self.label_name.setObjectName("Name_label")
+		self.title = "Client Login"
+		self.top = 400
+		self.left= 200
+		self.width= 500
+		self.height=500
+		#self.setWindowIcon(QtGui.QIcon("icon.jpg"))
 
-		self.label_pwd = QtWidgets.QLabel(Dialog)
-		self.label_pwd.setGeometry(QtCore.QRect(60,80,71,16))
-		self.label_pwd.setObjectName("Password_label")
+		self.InitUI()
 
-		self.loginButton = QtWidgets.QPushButton(Dialog)
-		self.loginButton.setGeometry(QtCore.QRect(150, 240, 81, 23))
-		self.loginButton.setObjectName("loginButton")
+	def InitUI(self):
+		self.setWindowTitle(self.title)
+		self.setGeometry(self.top, self.left, self.width, self.height)
+		self.show()
 
-		self.retranslateUi(Dialog)
-		QtCore.QMetaObject.connectSlotsByName(Dialog)
-
-		def retranslateUi(self,Dialog):
-			_translate = QtCore>QCoreApplication.translate
-			Dialog.setWindowTitle(_translate("Dialog","Login Screen"))
-
-
-if __name__ == '__main__':
-	app = QtWidgets.QApplication(sys.argv)
-	Dialog = QtWidgets.QDialog()
-	ui = ui_Dialog()
-	ui.setupUi(Dialog)
-	Dialog.show()
-	sys.exit(app.exec_())
+App = QApplication(sys.argv)
+window = Window()
+sys.exit(App.exec())
