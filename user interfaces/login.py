@@ -1,3 +1,7 @@
+'''
+window for client login to system
+email + password login
+'''
 from PyQt5 import QtGui
 from PyQt5.QtWidgets import QApplication, QMainWindow
 import sys
