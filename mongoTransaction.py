@@ -12,3 +12,8 @@ posts = collection
 
 #new transaction (inhouse)
 
+#aggregation of all transactions on date
+
+#aggregation of all transactions on a product
+
+#aggregation of all transactions on a location
