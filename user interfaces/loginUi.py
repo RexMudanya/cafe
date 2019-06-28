@@ -26,11 +26,13 @@ class Ui_startWindow(object):
         self.usernameField = QtWidgets.QLineEdit(self.centralwidget)
         self.usernameField.setGeometry(QtCore.QRect(180, 80, 211, 25))
         self.usernameField.setObjectName("usernameField")
+        self.usernameField.setPlaceholderText("Enter Username")
 
         self.passwordField = QtWidgets.QLineEdit(self.centralwidget)
         self.passwordField.setGeometry(QtCore.QRect(180, 140, 211, 25))
         self.passwordField.setEchoMode(QtWidgets.QLineEdit.Password)
         self.passwordField.setObjectName("passwordField")
+        self.passwordField.setPlaceholderText("Enter password")
 
         self.loginBtn = QtWidgets.QPushButton(self.centralwidget)
         self.loginBtn.setGeometry(QtCore.QRect(200, 190, 89, 25))

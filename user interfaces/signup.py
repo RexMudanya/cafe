@@ -16,6 +16,7 @@ class Ui_Signup(object):
         self.emailLineEdit = QtWidgets.QLineEdit(Signup)
         self.emailLineEdit.setGeometry(QtCore.QRect(160, 80, 231, 21))
         self.emailLineEdit.setObjectName("emailLineEdit")
+        self.emailLineEdit.setPlaceholderText("Enter your Email address")
         
         self.emailLbl = QtWidgets.QLabel(Signup)
         self.emailLbl.setGeometry(QtCore.QRect(20, 80, 121, 21))
@@ -28,6 +29,7 @@ class Ui_Signup(object):
         self.phoneNumLineEdit = QtWidgets.QLineEdit(Signup)
         self.phoneNumLineEdit.setGeometry(QtCore.QRect(160, 120, 231, 21))
         self.phoneNumLineEdit.setObjectName("phoneNumLineEdit")
+        self.phoneNumLineEdit.setPlaceholderText("Enter your phone number")
         
         self.confirmPwdLbl = QtWidgets.QLabel(Signup)
         self.confirmPwdLbl.setGeometry(QtCore.QRect(20, 230, 131, 21))
@@ -36,10 +38,12 @@ class Ui_Signup(object):
         self.pwdInputlineEdit = QtWidgets.QLineEdit(Signup)
         self.pwdInputlineEdit.setGeometry(QtCore.QRect(160, 180, 231, 21))
         self.pwdInputlineEdit.setObjectName("pwdInputlineEdit")
+        self.pwdInputlineEdit.setPlaceholderText("Enter your password")
         
         self.confirmPwdLineEdit = QtWidgets.QLineEdit(Signup)
         self.confirmPwdLineEdit.setGeometry(QtCore.QRect(160, 230, 231, 21))
         self.confirmPwdLineEdit.setObjectName("confirmPwdLineEdit")
+        self.confirmPwdLineEdit.setPlaceholderText("Confirm your password")
         
         self.passwordLbl = QtWidgets.QLabel(Signup)
         self.passwordLbl.setGeometry(QtCore.QRect(20, 180, 121, 21))
@@ -52,6 +56,7 @@ class Ui_Signup(object):
         self.usernameLnEdit = QtWidgets.QLineEdit(Signup)
         self.usernameLnEdit.setGeometry(QtCore.QRect(160, 40, 231, 21))
         self.usernameLnEdit.setObjectName("usernameLnEdit")
+        self.usernameLnEdit.setPlaceholderText("Enter your username")
         
         self.registerBtn = QtWidgets.QPushButton(Signup)
         self.registerBtn.setGeometry(QtCore.QRect(260, 280, 89, 25))
