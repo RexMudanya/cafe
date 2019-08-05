@@ -7,6 +7,8 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+import validation
+
 
 class Ui_Signup(object):
     def setupUi(self, Signup):
@@ -39,11 +41,13 @@ class Ui_Signup(object):
         self.pwdInputlineEdit.setGeometry(QtCore.QRect(160, 180, 231, 21))
         self.pwdInputlineEdit.setObjectName("pwdInputlineEdit")
         self.pwdInputlineEdit.setPlaceholderText("Enter your password")
+        self.pwdInputlineEdit.setEchoMode(QtWidgets.QLineEdit.Password)
         
         self.confirmPwdLineEdit = QtWidgets.QLineEdit(Signup)
         self.confirmPwdLineEdit.setGeometry(QtCore.QRect(160, 230, 231, 21))
         self.confirmPwdLineEdit.setObjectName("confirmPwdLineEdit")
         self.confirmPwdLineEdit.setPlaceholderText("Confirm your password")
+        self.confirmPwdLineEdit.setEchoMode(QtWidgets.QLineEdit.Password)
         
         self.passwordLbl = QtWidgets.QLabel(Signup)
         self.passwordLbl.setGeometry(QtCore.QRect(20, 180, 121, 21))
@@ -61,6 +65,7 @@ class Ui_Signup(object):
         self.registerBtn = QtWidgets.QPushButton(Signup)
         self.registerBtn.setGeometry(QtCore.QRect(260, 280, 89, 25))
         self.registerBtn.setObjectName("registerBtn")
+        self.registerBtn.clicked.connect(self.onSubmitBtnClicked)
         
         self.cancelBtn = QtWidgets.QPushButton(Signup)
         self.cancelBtn.setGeometry(QtCore.QRect(150, 280, 89, 25))
@@ -71,7 +76,7 @@ class Ui_Signup(object):
 
     def retranslateUi(self, Signup):
         _translate = QtCore.QCoreApplication.translate
-        Signup.setWindowTitle(_translate("Signup", "Dialog"))
+        Signup.setWindowTitle(_translate("Signup", "Signup Window"))
         self.emailLbl.setText(_translate("Signup", "Email :"))
         self.phoneNumLbl.setText(_translate("Signup", "Phone number :"))
         self.confirmPwdLbl.setText(_translate("Signup", "Confirm Password :"))
@@ -79,6 +84,23 @@ class Ui_Signup(object):
         self.usernameLbl.setText(_translate("Signup", "Username :"))
         self.registerBtn.setText(_translate("Signup", "Submit"))
         self.cancelBtn.setText(_translate("Signup", "Cancel"))
+
+
+    # todo: add show password checkbox
+    # todo: write password validation code
+    # todo: write input validation code
+
+    def onSubmitBtnClicked(self):
+
+        username = self.usernameLnEdit.text()
+        email = self.emailLineEdit.text()
+        phonenumber = self.phoneNumLineEdit.text()
+        pwdInput = self.pwdInputlineEdit.text()
+        confirmPwd = self.confirmPwdLineEdit.text()
+
+        # todo: implement validation methods on input
+        # todo: check blank fields from input
+        # todo: check the fields to be valid
 
 
 if __name__ == "__main__":
@@ -89,4 +111,3 @@ if __name__ == "__main__":
     ui.setupUi(Signup)
     Signup.show()
     sys.exit(app.exec_())
-
