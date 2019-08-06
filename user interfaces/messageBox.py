@@ -3,7 +3,7 @@ from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QWidget
 from PyQt5.QtWidgets import *
 
-error = 1
+# error = 1
 
 def window(error):
 	app = QApplication(sys.argv)
