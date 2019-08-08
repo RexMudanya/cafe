@@ -89,6 +89,7 @@ class Ui_Signup(object):
     # todo: add show password checkbox
     # todo: write password validation code
     # todo: write input validation code
+    # todo: implement the cancel button to go back to login screen
 
     def onSubmitBtnClicked(self):
 
@@ -101,6 +102,21 @@ class Ui_Signup(object):
         # todo: implement validation methods on input
         # todo: check blank fields from input
         # todo: check the fields to be valid
+        # todo: connect ui to database for writes and checks
+
+        if validation.check_blank_field(username) is not False: return True
+        if validation.check_blank_field(email) is not False: return True
+        if validation.check_blank_field(phonenumber) is not False: return True
+        if validation.check_blank_field(pwdInput) is not False: return True
+        if validation.check_blank_field(confirmPwd) is not False: return True
+
+        if validation.check_username(username) is not False: return True
+
+        if validation.email_validator(email) is not False: return True
+
+        if validation.phone_number_validation(phonenumber) is not False: return True
+
+        if validation.passwordValidator(pwdInput, confirmPwd) is not False: return True
 
 
 if __name__ == "__main__":

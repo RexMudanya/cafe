@@ -1,4 +1,4 @@
-# todo: pass error message to popup window displaying the message
+# todo: write function to compare if enter password and confirm password are the same
 # todo: write method to check if username/email/phone number is already registered
 
 import phonenumbers
@@ -9,8 +9,11 @@ from password_strength import PasswordPolicy
 import messageBox
 
 e = 0
+
 # function to check blanks
 # todo: rewrite this function
+
+
 def check_blank_field(check_field):
 
 	if len(check_field) != 0:
@@ -24,11 +27,11 @@ def check_blank_field(check_field):
 def passwordValidator(input, confirm):
 
 	policy = PasswordPolicy.from_names(
-		length = 6,
-		uppercase = 1,
-		numbers = 1,
-		special = 0,
-		nonletters = 1,
+		length= 6,
+		uppercase= 1,
+		numbers= 1,
+		special= 0,
+		nonletters= 1,
 	)
 
 	if policy.test(input) == False:
@@ -66,3 +69,6 @@ def phone_number_validator(num):
 	else:
 		e = 4
 		return messageBox.window(e)
+
+def check_username(username):
+	pass
