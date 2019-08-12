@@ -104,7 +104,7 @@ class Ui_Signup(object):
         # todo: check the fields to be valid
         # todo: connect ui to database for writes and checks
 
-        if validation.check_blank_field(username) is not False: return True
+        if validation.check_blank_field(username) is not False: return print("True")
         if validation.check_blank_field(email) is not False: return True
         if validation.check_blank_field(phonenumber) is not False: return True
         if validation.check_blank_field(pwdInput) is not False: return True

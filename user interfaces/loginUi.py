@@ -10,7 +10,8 @@
 # todo: implement login button
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtCore import pyqtSlot
+import signup
+
 # from signup import Ui_Signup
 
 class Ui_startWindow(object):
